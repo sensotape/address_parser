@@ -71,5 +71,3 @@ The rest - framework, choice of libraries/gems/external services - is entirely u
 - Geocoding, though meant to provide coordinates for address, can also be used to parse addresses. You can check [google's geocoding API](https://developers.google.com/maps/documentation/javascript/geocoding) or any other geocoding APIs.
 - Instant response is not required, but the service will be under continious load.
 - The service should be deployable without too much effort.
-
-I
