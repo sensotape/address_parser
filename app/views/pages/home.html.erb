@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="form-container text-center">
+  <%= simple_form_for @flat, remote: true, wrapper: :inline_form, html: { class: "form-inline" } do |f|  %>
+    <%= f.input :address, label: false %>
+    <%= f.submit value: "Geocode", class: 'btn btn-primary' %>
+  <% end %>
+
+  <div class="result">
+    <h2 id="place_name"></h2>
+  </div>
+
+  <div class="map-container">
+    <div id="map" style="height: 400px; width: 800px"></div>
+  </div>
+</div>

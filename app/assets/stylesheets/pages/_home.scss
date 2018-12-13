@@ -1,1 +1,25 @@
-// Specific CSS for your home-page
+body {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-container {
+  margin: 5em;
+  color: white;
+}
+
+.result {
+  margin: 1em;
+}
+
+.map-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+#map {
+  flex: 0 0 auto;
+  border-radius: 3px;
+}

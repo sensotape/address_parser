@@ -1,0 +1,21 @@
+function addAddress() {
+  const placeName = document.getElementById("place_name");
+  placeName.innerText = "<%= @flat.formatted_address %>";
+}
+
+function addMap() {
+  const latitude = <%= @flat.latitude %>;
+  const longitude = <%= @flat.longitude %>;
+  const map = new GMaps({ el: '#map', lat: latitude, lng: longitude, zoom: 15 });
+  const marker = { lat: latitude, lng: longitude };
+  map.addMarkers([marker]);
+  const mapHTML = document.getElementById("map");
+  mapHTML.insertAdjacentHTML('beforeend', `<script>${map}</script>`);
+}
+
+function geocoding() {
+  addAddress();
+  addMap();
+};
+
+geocoding();
